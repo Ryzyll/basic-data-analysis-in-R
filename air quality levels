@@ -1,0 +1,17 @@
+#data
+PM2.5_levels = c(24.8, 25.9, 26, 27.2, 28.7, 29.4, 30.5, 31.6, 32.4, 33.1)
+
+#summary statistics
+sample(PM2.5_levels)
+mean(PM2.5_levels)
+median(PM2.5_levels)
+sd(PM2.5_levels)
+IQR(PM2.5_levels)
+range(PM2.5_levels)
+
+#one-sample t-test and confidence interval
+t.test(PM2.5_levels, mu = 25, alternative = "greater")
+t.test(PM2.5_levels)$conf.int
+
+#boxplot of data
+boxplot(PM2.5_levels, main = "Air Quality Levels", ylab = "PM2.5 Levels")
